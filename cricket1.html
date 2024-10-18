@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- this is version 1.0 of the project -->
+<html lang="en">
+<head>
+    <title>CricketGame</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>BAT BALL STUMP</h1>
+    <button onclick="
+    const userChoiceMsg='YOU HAVE CHOSEN BAT';
+    // this will generate an random nuber between 0 and 3
+   let randomNumber=Math.random()*3;
+    if(randomNumber>0 && randomNumber<=1 ){
+         computerChoice ='Bat';
+    }
+    else if (randomNumber>1 && randomNumber<=2) {
+        computerChoice ='Ball';
+    } else {
+        computerChoice='Stumps';
+    }
+    const computerChoiceMsg= `computerChoice is ${computerChoice}`;
+    // result
+    let resultMsg;
+    if (computerChoice=='Ball'){
+        resultMsg='YOU WON THE GAME';
+    }else if(computerChoice=='Stumps'){
+        resultMsg='YOU lost the Game !! try again sir !';
+    }else{
+        resultMsg='The Game is Draw!!';
+    }
+    alert(`${userChoiceMsg} ${computerChoiceMsg} and ${ resultMsg}`);
+    ">BAT</button>
+    <button onclick="
+     userChoiceMsg='YOU HAVE CHOSEN BALL';
+    // this will generate an random nuber between 0 and 3
+    randomNumber=Math.random()*3;
+    if(randomNumber>0 && randomNumber<=1 ){
+         computerChoice ='Bat';
+    }
+    else if (randomNumber>1 && randomNumber<=2) {
+        computerChoice ='Ball';
+    } else {
+        computerChoice='Stumps';
+    }
+     computerChoiceMsg= `computerChoice is ${computerChoice}`;
+    // result
+    if (computerChoice =='Ball'){
+        resultMsg='The Game is Draw!!';
+    }else if(computerChoice =='Stumps'){
+        resultMsg='YOU WON THE GAME';
+    }else{
+        resultMsg='YOU lost the Game !! try again sir !';
+    }
+    alert(`${userChoiceMsg} ${computerChoiceMsg} and ${ resultMsg}`);">BALL</button>
+    <button onclick="
+    userChoiceMsg='YOU HAVE CHOSEN STUMPS';
+   // this will generate an random nuber between 0 and 3
+   randomNumber=Math.random()*3;
+   if(randomNumber>0 && randomNumber<=1 ){
+        computerChoice ='Bat';
+   }
+   else if (randomNumber>1 && randomNumber<=2) {
+       computerChoice ='Ball';
+   } else {
+       computerChoice='Stumps';
+   }
+    computerChoiceMsg= `computerChoice is ${computerChoice}`;
+   // result
+   if (computerChoice =='Ball'){
+       resultMsg='YOU lost the Game !! try again sir !';
+   }else if(computerChoice =='Stumps'){
+       resultMsg='The Game is Draw!!';
+   }else{
+       resultMsg='YOU WON THE GAME';}
+   alert(`${userChoiceMsg} ${computerChoiceMsg} and ${ resultMsg}`);">STUMP</button>
+</body>
+</html>

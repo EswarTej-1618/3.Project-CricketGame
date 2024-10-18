@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--this is version 2.0 of the project the best one till now -->
+<html lang="en">
+<head>
+    <title>CricketGame</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>BAT BALL STUMP</h1>
+    <button onclick="
+    const userChoiceMsg='YOU HAVE CHOSEN BAT';
+    // function call
+    let computerChoice =generateComputerChoice();
+    // result function call
+    let resultMsg=getResult('Bat',computerChoice); 
+    // function call for showing result
+    showResult('Bat',computerChoice,resultMsg)
+    ">BAT</button>
+
+    <button onclick=" 
+     userChoiceMsg='YOU HAVE CHOSEN BALL';
+    computerChoice=generateComputerChoice(); 
+     resultMsg=getResult('Ball',computerChoice);
+    showResult('Ball',computerChoice,resultMsg)
+    ">BALL</button>
+
+    <button onclick="
+    userChoiceMsg='YOU HAVE CHOSEN STUMPS';
+    computerChoice=generateComputerChoice();
+   resultMsg=getResult('Stumps',computerChoice);
+showResult('Stumps',computerChoice,resultMsg)
+  ">STUMP</button>
+ 
+
+   <script>
+  
+  function generateComputerChoice(){
+      randomNumber=Math.random()*3;
+     
+      if(randomNumber>0 && randomNumber<=1 ){
+         return 'Bat';
+        }
+       else if (randomNumber>1 &&       randomNumber<=2) {
+          return 'Ball';
+       } else {
+          return 'Stumps';
+       }
+        ChoiceMsg= `computerChoice is ${Choice}`;   
+    }
+
+    // function for getting result msg..
+
+    function getResult(userMove,computerMove){
+        if(userMove==='Bat'){
+           if (computerMove=='Ball'){
+           return 'YOU WON THE GAME';
+           }else if(computerMove=='Stumps'){
+            return 'YOU lost the Game !! try again sir !';
+            }else{
+            return 'The Game is Draw!!';
+    }
+
+        }else if(userMove==='Ball'){
+
+            if (computerMove =='Ball'){
+             return 'The Game is Draw!!';
+            }else if(computerMove   =='Stumps'){
+             return 'YOU WON THE GAME';
+            }else{
+             return 'YOU lost the Game !! try again sir !';
+            } 
+        }else{
+            if (computerMove=='Ball'){
+              return'YOU lost the Game !! try again sir !';
+            }else if(computerMove=='Stumps'){
+              return'The Game is Draw!!';
+            }else{
+              return'YOU WON THE GAME'};
+        }
+
+    }
+
+    // Function for showing alert .. box on the screen..
+    function showResult (userMove,computerMove,result){
+        alert(` Your Choice is ${userMove} Computer Choice is  ${computerMove} and ${ result}`);
+    }
+   </script>
+</body>
+</html>
